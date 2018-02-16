@@ -1,0 +1,71 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++			DECRYPT SHIP FLAGS AND FIND FRIENDS		     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+bool IsAFriend(int index) {
+	bool rc;
+	rc = false;
+
+	// Set encryption key to ships X and Y axis
+	int cryptbase1= shipX[index], cryptbase2= shipY[index];
+	// encryptedFlag is ships original flag
+	int encryptedFlag = shipFlag[index];
+	// Calculate decrypted flag (encryptedFlag and shipY) - shipX
+	int decryptedFlag = (encryptedFlag ^ cryptbase2) - cryptbase1;
+
+
+	// REPLACE YOUR NAME WITH OLLIE AND 13303
+	if (decryptedFlag == 29763) { //Jake
+		rc = true;
+	}
+
+	if (decryptedFlag == 6969) { // Dan
+		rc = true;
+	}
+
+	if (decryptedFlag == 9001) { // Edwin
+		rc = true;
+	}
+
+	if (decryptedFlag == 1600) { // Aiden
+		rc = true;
+	}
+
+	if (decryptedFlag == 4222) { // Adam
+		rc = true;
+	}
+	
+	if (decryptedFlag == 4212) { // James
+		rc = true;
+	}
+	
+	if (decryptedFlag == 8653) { // Tianyi
+		rc = true;
+	}
+
+	if (decryptedFlag == 13243) { // Anab
+		rc = true;
+	}
+
+	if (decryptedFlag == 16342) { // Shaz
+		rc = true;
+	}
+
+	return rc;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++		ENCRYPT YOUR FLAG : Change the !!!!! to your flag	     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+void main() {
+	CONST int Flag = !!!!!;
+	int cryptbase1= myX, cryptbase2= myY;
+	int encrypted= (Flag + cryptbase1) ^ cryptbase2;
+	int decrypted= (encrypted ^ cryptbase2) - cryptbase1;
+	printf("Reversed Formula Result(Decrypted): %d\n", decrypted);
+	new_flag = encrypted;
+	printf("Formulated Flag(Encrypted): %d\n", encrypted);
+}
