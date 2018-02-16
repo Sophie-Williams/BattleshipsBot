@@ -1,40 +1,19 @@
-========================================================================
-    CONSOLE APPLICATION : BattleshipBot Project Overview
-========================================================================
+# Battleship Bots - Year 1 University Project
 
-AppWizard has created this BattleshipBot application for you.
+## Task
+To create a bot that will take part in a battle royale against classmates on a server, written by the lecturer.
 
-This file contains a summary of what you will find in each of the files that
-make up your BattleshipBot application.
+The bot is able to move around a large (500x500) grid at a constant rate, shoot at a constant rate and range, and detect other ships at a constant range. Networking code is provided, the task was to write battle instructions for the bot.
 
+## Assessment
+BattleshipServer.exe is run on a central server. Students connect using the given credentials on the day, by changing parameters in the client code.
 
-BattleshipBot.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+> ** I still have the server executable, but as it is compiled code I did not write, I'm not sure if it's OK to distribute it **
 
-BattleshipBot.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+Student ships will then battle eachother on the grid, losing one point for every hit taken and gaining one point for every point of damage dealt. This will produce a ranking of ship tactics and grades will be distributed in accordance with this ranking.
 
-BattleshipBot.cpp
-    This is the main application source file.
+## Result
+I got 62% - not too shabby for my first programming assignment!
 
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named BattleshipBot.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+## Forking
+It shouldn't be too difficult to write a server for this based on the screenshot from scratch by looking at the client code. If you actually want to do this and need help, contact me to discuss the server code I have!

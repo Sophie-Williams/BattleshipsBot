@@ -1,7 +1,9 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +			DECRYPT SHIP FLAGS AND FIND FRIENDS		     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	
+
+// Doesn't really work so didn't make it into final code
+
 bool IsAFriend(int index) {
 	bool rc;
 	rc = false;
