@@ -9,15 +9,14 @@
 #pragma comment(lib, "wsock32.lib")
 
 
-#define STUDENT_NUMBER		"13014222"
-#define STUDENT_FIRSTNAME	"Adam"
-#define STUDENT_FAMILYNAME	"Matheson"
+#define STUDENT_NUMBER		"123456789"
+#define STUDENT_FIRSTNAME	"Joe"
+#define STUDENT_FAMILYNAME	"Bloggs"
 
 #define IP_ADDRESS_SERVER	"127.0.0.1"
-//#define IP_ADDRESS_SERVER "164.11.80.55"
 
-#define PORT_SEND	 1924 // We define a port that we are going to use.
-#define PORT_RECEIVE 1925 // We define a port that we are going to use.
+#define PORT_SEND	 8000 // We define a port that we are going to use.
+#define PORT_RECEIVE 8000 // We define a port that we are going to use.
 
 
 #define MAX_BUFFER_SIZE	500
@@ -122,12 +121,6 @@ int enemyHealth[MAX_SHIPS];
 int enemyFlag[MAX_SHIPS];
 int enemyDistance[MAX_SHIPS];
 
-// NOTE:
-// The reason for putting this code in a function was to collect what was a very simple piece of code into one group, and therefore make it easier to read in the context of tactics().
-// It also demonstrates I am able to write functions.
-// I felt that other code in tatics() could be put into a function, but it was not necessary to do. It is already fairly short, tidy, readable and well commented.
-// Putting the code in a function would have next to no effect on efficiency due to the speed of the computers. Therefore readability is more important.
-// Collecting all the code together under the single tactics() function created better readability, in my opinion.
 void return_to_battle() // Code to re-direct my ship if it is heading out of the battlefield limits
 {
 	if (myY > 700) // Remain within a square in the middle - the rest of my alliance will do the same, creating a central "black hole" swallowing other ships, rather than spreading our strength thin.
@@ -172,31 +165,10 @@ bool IsAFriend(int index) // Code to return true if the visible ship has a decry
 	int decryptedFlag = (encryptedFlag ^ cryptbase2) - cryptbase1;
 
 	// Enter all friends flags here
-	if (decryptedFlag == 29763) { //Jake
+	if (decryptedFlag == 29763) {
 		rc = true;
 	}
-	if (decryptedFlag == 6969) { // Dan
-		rc = true;
-	}
-	if (decryptedFlag == 9001) { // Edwin
-		rc = true;
-	}
-	if (decryptedFlag == 1600) { // Aiden
-		rc = true;
-	}
-	if (decryptedFlag == 13303) { // Ollie
-		rc = true;
-	}
-	if (decryptedFlag == 4212) { // James
-		rc = true;
-	}
-	if (decryptedFlag == 8653) { // Tianyi
-		rc = true;
-	}
-	if (decryptedFlag == 13243) { // Anab
-		rc = true;
-	}
-	if (decryptedFlag == 16342) { // Shaz
+	if (decryptedFlag == 6969) {
 		rc = true;
 	}
 	return rc;

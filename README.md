@@ -12,6 +12,8 @@ BattleshipServer.exe is run on a central server. Students connect using the give
 
 Student ships will then battle eachother on the grid, losing one point for every hit taken and gaining one point for every point of damage dealt. This will produce a ranking of ship tactics and grades will be distributed in accordance with this ranking.
 
+![BattleshipBot animated demo](https://github.com/adstr123/BattleshipsBot/blob/master/demo.gif)
+
 ## Result
 I got 62% - not too shabby for my first programming assignment!
 
